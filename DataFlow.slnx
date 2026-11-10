@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DataFlow.Core/DataFlow.Core.csproj" />
+  <Project Path="DataFlow.Demo/DataFlow.Demo.csproj" />
+</Solution>
