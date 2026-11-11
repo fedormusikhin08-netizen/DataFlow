@@ -1,13 +1,13 @@
 ﻿using DataFlow.Core;
 
-var numbers = new GuardedBuffer<int>(x => x > 0);
-Console.WriteLine(numbers.TryAdd(5));
-Console.WriteLine(numbers.TryAdd(-3));
-Console.WriteLine(numbers.TryAdd(100));
-Console.WriteLine($"Count = {numbers.Count}, AcceptedCount = {numbers.AcceptedCount}");
+var price = new Record<decimal>(1200m, "Цена");
+Console.WriteLine($"Исходная запись: {price}");
+var discounted = RecordMapper.Map(price, (decimal p) => p * 0.9m, "Со скидкой");
+Console.WriteLine($"decimal → decimal: {discounted}");
+var priceTag = RecordMapper.Map(price, (decimal p) => p >= 1000m ? "дорогая" : "дешёвая", "Категория");
+Console.WriteLine($"decimal → string: {priceTag}");
 
-var words = new GuardedBuffer<string>(s => !string.IsNullOrWhiteSpace(s));
-Console.WriteLine(words.TryAdd("обобщение"));
-Console.WriteLine(words.TryAdd(" "));
-Console.WriteLine($"Count = {words.Count}, AcceptedCount = {words.AcceptedCount}");
-Console.WriteLine($"numbers.AcceptedCount = {numbers.AcceptedCount}");
+var year = new Record<int>(1967, "Год");
+Console.WriteLine($"Исходная запись: {year}");
+Console.WriteLine($"int → int: {RecordMapper.Map(year, (int y) => 2026 - y, "Возраст книги")}");
+Console.WriteLine($"int → bool: {RecordMapper.Map(year, (int y) => y >= 2000, "Современная")}");
