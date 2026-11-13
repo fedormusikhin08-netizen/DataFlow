@@ -1,0 +1,12 @@
+  Определение проектов для восстановления...
+  Все проекты обновлены для восстановления.
+  DataFlow.Core -> D:\Dev\study\DataFlow\DataFlow.Core\bin\Debug\net10.0\DataFlow.Core.dll
+D:\Dev\study\DataFlow\DataFlow.Demo\ExpectedErrors.cs(9,43): error CS0311: Тип "string" не может быть использован как параметр типа "T" в универсальном типе или методе "InMemoryRepository<T>". Нет преобразования неявной ссылки из "string" в "DataFlow.Core.IEntity". [D:\Dev\study\DataFlow\DataFlow.Demo\DataFlow.Demo.csproj]
+
+Ошибка сборки.
+
+D:\Dev\study\DataFlow\DataFlow.Demo\ExpectedErrors.cs(9,43): error CS0311: Тип "string" не может быть использован как параметр типа "T" в универсальном типе или методе "InMemoryRepository<T>". Нет преобразования неявной ссылки из "string" в "DataFlow.Core.IEntity". [D:\Dev\study\DataFlow\DataFlow.Demo\DataFlow.Demo.csproj]
+    Предупреждений: 0
+    Ошибок: 1
+
+Прошло времени 00:00:01.49
