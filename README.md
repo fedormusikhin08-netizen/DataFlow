@@ -73,8 +73,6 @@ classDiagram
     }
     IRepository~T~ <|.. InMemoryRepository~T~
     IContainer~T~ <|.. Container~T~
-    IRepository~T~ : where T : IEntity
-    IContainer~T~ : out T
 
     class Record~T~ {
         <<struct>>
